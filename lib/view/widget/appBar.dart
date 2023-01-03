@@ -151,7 +151,7 @@ class _ActionBarState extends ConsumerState<ActionBar> {
                           return Text("Sobre",
                               style: TextStyle(
                                   color: isHovered
-                                      ? neonColor
+                                      ? kPrimaryColor
                                       : textColor,
                                   fontSize: 16,
                                   fontFamily: 'sfmono'));
@@ -178,7 +178,7 @@ class _ActionBarState extends ConsumerState<ActionBar> {
                           return Text("Projetos",
                               style: TextStyle(
                                   color: isHovered
-                                      ? neonColor
+                                      ? kPrimaryColor
                                       : textColor,
                                   fontSize: 16,
                                   fontFamily: 'sfmono'));
@@ -206,7 +206,7 @@ class _ActionBarState extends ConsumerState<ActionBar> {
                           return Text("Contatos",
                               style: TextStyle(
                                   color: isHovered
-                                      ? neonColor
+                                      ? kPrimaryColor
                                       : textColor,
                                   fontSize: 16,
                                   fontFamily: 'sfmono'));
@@ -232,7 +232,7 @@ class _ActionBarState extends ConsumerState<ActionBar> {
                           return Text("Curriculo",
                               style: TextStyle(
                                   color: isHovered
-                                      ? neonColor
+                                      ? kPrimaryColor
                                       : textColor,
                                   fontSize: 16,
                                   fontFamily: 'sfmono'));
