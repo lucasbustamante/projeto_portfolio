@@ -19,6 +19,13 @@ class ActionBar extends ConsumerStatefulWidget with PreferredSizeWidget {
 }
 
 class _ActionBarState extends ConsumerState<ActionBar> {
+
+  String item1 = 'Sobre';
+  String item2 = 'Projetos';
+  String item3 = 'Contato';
+  String item4 = 'Curriculo';
+
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -35,7 +42,7 @@ class _ActionBarState extends ConsumerState<ActionBar> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       PopupMenuButton(
-                        color: cardColor,
+                        color: primaryColor,
                         itemBuilder: (c) => <PopupMenuEntry>[
                           PopupMenuItem(
                             child: Container(
@@ -47,13 +54,16 @@ class _ActionBarState extends ConsumerState<ActionBar> {
                                   child: Row(
                                     children: [
                                       Icon(Icons.account_circle_rounded,
-                                          size: 18),
+                                          size: 18,
+                                          color: textLight2),
                                       Padding(
                                         padding:
                                             const EdgeInsets.only(left: 10.0),
                                         child: Text(
-                                          'Sobre',
-                                          style: GoogleFonts.roboto(),
+                                          item1,
+                                          style: GoogleFonts.roboto(
+                                            color: textLight2
+                                          ),
                                         ),
                                       ),
                                     ],
@@ -66,12 +76,15 @@ class _ActionBarState extends ConsumerState<ActionBar> {
                                   preferPosition: AutoScrollPosition.begin),
                               child: Row(
                                 children: [
-                                  Icon(Icons.travel_explore_rounded, size: 18),
+                                  Icon(Icons.computer_rounded, size: 18,
+                                      color: textLight2),
                                   Padding(
                                     padding: const EdgeInsets.only(left: 10.0),
                                     child: Text(
-                                      'Projetos',
-                                      style: GoogleFonts.roboto(),
+                                      item2,
+                                      style: GoogleFonts.roboto(
+                                            color: textLight2
+                                          ),
                                     ),
                                   ),
                                 ],
@@ -84,12 +97,15 @@ class _ActionBarState extends ConsumerState<ActionBar> {
                                   preferPosition: AutoScrollPosition.begin),
                               child: Row(
                                 children: [
-                                  Icon(Icons.computer_rounded, size: 18),
+                                  Icon(Icons.email_outlined, size: 18,
+                                  color: textLight2),
                                   Padding(
                                     padding: const EdgeInsets.only(left: 10.0),
                                     child: Text(
-                                      'Contatos',
-                                      style: GoogleFonts.roboto(),
+                                      item3,
+                                      style: GoogleFonts.roboto(
+                                            color: textLight2
+                                          ),
                                     ),
                                   ),
                                 ],
@@ -103,12 +119,15 @@ class _ActionBarState extends ConsumerState<ActionBar> {
           },
                               child: Row(
                                 children: [
-                                  Icon(Icons.phone_rounded, size: 18),
+                                  Icon(Icons.contact_page_outlined, size: 18,
+                                      color: textLight2),
                                   Padding(
                                     padding: const EdgeInsets.only(left: 10.0),
                                     child: Text(
-                                      'Curriculo',
-                                      style: GoogleFonts.roboto(),
+                                      item4,
+                                      style: GoogleFonts.roboto(
+                                            color: textLight2
+                                          ),
                                     ),
                                   ),
                                 ],
@@ -138,7 +157,7 @@ class _ActionBarState extends ConsumerState<ActionBar> {
                       },
                       onHover: (bol) {
                         if (bol) {
-                          ref.read(hoverProvider.notifier).state = "sobreTitle";
+                          ref.read(hoverProvider.notifier).state = item1;
                         } else {
                           ref.read(hoverProvider.notifier).state = "";
                         }
@@ -147,11 +166,11 @@ class _ActionBarState extends ConsumerState<ActionBar> {
                         padding: const EdgeInsets.symmetric(horizontal: 30.0),
                         child: Consumer(builder: (context, ref, child) {
                           String state = ref.watch(hoverProvider);
-                          bool isHovered = (state == "sobreTitle");
-                          return Text("Sobre",
+                          bool isHovered = (state == item1);
+                          return Text(item1,
                               style: TextStyle(
                                   color: isHovered
-                                      ? kPrimaryColor
+                                      ? primaryColor
                                       : textColor,
                                   fontSize: 16,
                                   fontFamily: 'sfmono'));
@@ -165,7 +184,7 @@ class _ActionBarState extends ConsumerState<ActionBar> {
                       },
                       onHover: (bol) {
                         if (bol) {
-                          ref.read(hoverProvider.notifier).state = "projetosTitle";
+                          ref.read(hoverProvider.notifier).state = item2;
                         } else {
                           ref.read(hoverProvider.notifier).state = "";
                         }
@@ -174,11 +193,11 @@ class _ActionBarState extends ConsumerState<ActionBar> {
                         padding: const EdgeInsets.symmetric(horizontal: 30.0),
                         child: Consumer(builder: (context, ref, child) {
                           String state = ref.watch(hoverProvider);
-                          bool isHovered = (state == "projetosTitle");
-                          return Text("Projetos",
+                          bool isHovered = (state == item2);
+                          return Text(item2,
                               style: TextStyle(
                                   color: isHovered
-                                      ? kPrimaryColor
+                                      ? primaryColor
                                       : textColor,
                                   fontSize: 16,
                                   fontFamily: 'sfmono'));
@@ -192,7 +211,7 @@ class _ActionBarState extends ConsumerState<ActionBar> {
                       },
                       onHover: (bol) {
                         if (bol) {
-                          ref.read(hoverProvider.notifier).state = "contatosTitle";
+                          ref.read(hoverProvider.notifier).state = item3;
                         } else {
                           ref.read(hoverProvider.notifier).state = "";
                         }
@@ -201,12 +220,12 @@ class _ActionBarState extends ConsumerState<ActionBar> {
                         padding: const EdgeInsets.symmetric(horizontal: 30.0),
                         child: Consumer(builder: (context, ref, child) {
                           String state = ref.watch(hoverProvider);
-                          bool isHovered = (state == "contatosTitle");
+                          bool isHovered = (state == item3);
 
-                          return Text("Contatos",
+                          return Text(item3,
                               style: TextStyle(
                                   color: isHovered
-                                      ? kPrimaryColor
+                                      ? primaryColor
                                       : textColor,
                                   fontSize: 16,
                                   fontFamily: 'sfmono'));
@@ -219,7 +238,7 @@ class _ActionBarState extends ConsumerState<ActionBar> {
                       },
                       onHover: (bol) {
                         if (bol) {
-                          ref.read(hoverProvider.notifier).state = "curriculoTitle";
+                          ref.read(hoverProvider.notifier).state = item4;
                         } else {
                           ref.read(hoverProvider.notifier).state = "";
                         }
@@ -228,11 +247,11 @@ class _ActionBarState extends ConsumerState<ActionBar> {
                         padding: const EdgeInsets.symmetric(horizontal: 30.0),
                         child: Consumer(builder: (context, ref, child) {
                           String state = ref.watch(hoverProvider);
-                          bool isHovered = (state == "curriculoTitle");
-                          return Text("Curriculo",
+                          bool isHovered = (state == item4);
+                          return Text(item4,
                               style: TextStyle(
                                   color: isHovered
-                                      ? kPrimaryColor
+                                      ? primaryColor
                                       : textColor,
                                   fontSize: 16,
                                   fontFamily: 'sfmono'));

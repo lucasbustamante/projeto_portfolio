@@ -52,7 +52,7 @@ class _LeftPaneState extends ConsumerState<LeftPane> {
                                 padding: const EdgeInsets.only(bottom: 8.0),
                                 child: SvgPicture.asset('assets/svg/github.svg',
                                     color: val == "git"
-                                        ? kPrimaryColor
+                                        ? primaryColor
                                         : textColor,
                                     width: 22),
                               ),
@@ -80,7 +80,7 @@ class _LeftPaneState extends ConsumerState<LeftPane> {
                                 child: SvgPicture.asset(
                                     'assets/svg/instagram.svg',
                                     color: val == "instagram"
-                                        ? kPrimaryColor
+                                        ? primaryColor
                                         : textColor,
                                     width: 22),
                               ),
@@ -108,7 +108,7 @@ class _LeftPaneState extends ConsumerState<LeftPane> {
                                 child: SvgPicture.asset(
                                     'assets/svg/linkedIn.svg',
                                     color: val == "linkedIn"
-                                        ? kPrimaryColor
+                                        ? primaryColor
                                         : textColor,
                                     width: 22),
                               ),
@@ -136,7 +136,7 @@ class _LeftPaneState extends ConsumerState<LeftPane> {
                                 child: SvgPicture.asset(
                                     'assets/svg/whatsapp.svg',
                                     color: val == "whatsapp"
-                                        ? kPrimaryColor
+                                        ? primaryColor
                                         : textColor,
                                     width: 22),
                               ),

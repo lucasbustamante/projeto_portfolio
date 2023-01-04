@@ -1,28 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:lottie/lottie.dart';
 import '../../resource/appClass.dart';
 import '../../resource/colors.dart';
 import '../../resource/strings.dart';
 
-class AboutWeb extends ConsumerStatefulWidget {
-  const AboutWeb({Key? key}) : super(key: key);
+class AboutMobile extends StatefulWidget {
+  const AboutMobile({Key? key}) : super(key: key);
 
   @override
-  ConsumerState<AboutWeb> createState() => _AboutWebState();
+  State<AboutMobile> createState() => _AboutMobileState();
 }
 
-class _AboutWebState extends ConsumerState<AboutWeb> {
-
-
+class _AboutMobileState extends State<AboutMobile> {
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(
-          left: AppClass().getMqWidth(context) * 0.03,
-          right: AppClass().getMqWidth(context) * 0.03),
-      padding: EdgeInsets.only(bottom: 40),
+          left: AppClass().getMqWidth(context) * 0.1,
+          right: AppClass().getMqWidth(context) * 0.1),
+      padding: EdgeInsets.only(bottom: 30),
       child: Column(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.center,
@@ -36,13 +32,12 @@ class _AboutWebState extends ConsumerState<AboutWeb> {
                 width: AppClass().getMqWidth(context) * 0.02,
                 color: textLight,
               ),
-              Text(
-                Strings.about,
+              Text(Strings.about,
                 style: GoogleFonts.robotoSlab(
-                  color: primaryColor,
+                    color: primaryColor,
                     letterSpacing: 1,
                     fontWeight: FontWeight.bold,
-                    fontSize: 27),
+                    fontSize: 25),
               ),
               Container(
                 height: 0.5,
@@ -60,14 +55,14 @@ class _AboutWebState extends ConsumerState<AboutWeb> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.only(top: 40.0),
+                      padding: const EdgeInsets.only(top: 30.0),
                       child: Text(
                         Strings.aboutPart1,
                         style: GoogleFonts.roboto(
                           color: textLight,
                           letterSpacing: 1,
                           height: 1.5,
-                          fontSize: 18,
+                          fontSize: 15,
                         ),
                       ),
                     ),
@@ -79,7 +74,7 @@ class _AboutWebState extends ConsumerState<AboutWeb> {
                           color: textLight,
                           letterSpacing: 1,
                           height: 1.5,
-                          fontSize: 18,
+                          fontSize: 15,
                         ),
                       ),
                     ),
@@ -91,7 +86,7 @@ class _AboutWebState extends ConsumerState<AboutWeb> {
                           color: textLight,
                           letterSpacing: 1,
                           height: 1.5,
-                          fontSize: 18,
+                          fontSize: 15,
                         ),
                       ),
                     ),
@@ -103,7 +98,7 @@ class _AboutWebState extends ConsumerState<AboutWeb> {
                           color: textLight,
                           letterSpacing: 1,
                           height: 1.5,
-                          fontSize: 18,
+                          fontSize: 15,
                         ),
                       ),
                     ),
@@ -116,7 +111,7 @@ class _AboutWebState extends ConsumerState<AboutWeb> {
                           color: primaryColor,
                           letterSpacing: 1,
                           height: 1.5,
-                          fontSize: 20,
+                          fontSize: 17,
                         ),
                       ),
                     ),
@@ -126,27 +121,28 @@ class _AboutWebState extends ConsumerState<AboutWeb> {
                           crossAxisCount: 2,
                           shrinkWrap: true,
                           childAspectRatio: 10,
-                          children: [Row(
-                            children: [
-                              Icon(Icons.arrow_right),
-                              Text(Strings.tech,
-                                  style: GoogleFonts.robotoFlex(
-                                    color: textLight,
-                                    letterSpacing: 1,
-                                    height: 1.5,
-                                    fontSize: 17,
-                                  )),
-                            ],
-                          ),
+                          children: [
                             Row(
                               children: [
                                 Icon(Icons.arrow_right),
-                                Text(Strings.tech1,
+                                Text(Strings.tech,
                                     style: GoogleFonts.robotoFlex(
                                       color: textLight,
                                       letterSpacing: 1,
                                       height: 1.5,
-                                      fontSize: 17,
+                                      fontSize: 14,
+                                    )),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                Icon(Icons.arrow_right),
+                                Text(' Flutter',
+                                    style: GoogleFonts.robotoFlex(
+                                      color: textLight,
+                                      letterSpacing: 1,
+                                      height: 1.5,
+                                      fontSize: 14,
                                     )),
                               ],
                             ),
@@ -158,7 +154,7 @@ class _AboutWebState extends ConsumerState<AboutWeb> {
                                       color: textLight,
                                       letterSpacing: 1,
                                       height: 1.5,
-                                      fontSize: 17,
+                                      fontSize: 14,
                                     )),
                               ],
                             ),
@@ -170,7 +166,7 @@ class _AboutWebState extends ConsumerState<AboutWeb> {
                                       color: textLight,
                                       letterSpacing: 1,
                                       height: 1.5,
-                                      fontSize: 17,
+                                      fontSize: 14,
                                     )),
                               ],
                             ),
@@ -182,7 +178,7 @@ class _AboutWebState extends ConsumerState<AboutWeb> {
                                       color: textLight,
                                       letterSpacing: 1,
                                       height: 1.5,
-                                      fontSize: 17,
+                                      fontSize: 14,
                                     )),
                               ],
                             ),
@@ -194,7 +190,7 @@ class _AboutWebState extends ConsumerState<AboutWeb> {
                                       color: textLight,
                                       letterSpacing: 1,
                                       height: 1.5,
-                                      fontSize: 17,
+                                      fontSize: 14,
                                     )),
                               ],
                             ),
@@ -206,7 +202,7 @@ class _AboutWebState extends ConsumerState<AboutWeb> {
                                       color: textLight,
                                       letterSpacing: 1,
                                       height: 1.5,
-                                      fontSize: 17,
+                                      fontSize: 14,
                                     )),
                               ],
                             ),
@@ -218,7 +214,7 @@ class _AboutWebState extends ConsumerState<AboutWeb> {
                                       color: textLight,
                                       letterSpacing: 1,
                                       height: 1.5,
-                                      fontSize: 17,
+                                      fontSize: 14,
                                     )),
                               ],
                             ),
@@ -230,55 +226,14 @@ class _AboutWebState extends ConsumerState<AboutWeb> {
                                       color: textLight,
                                       letterSpacing: 1,
                                       height: 1.5,
-                                      fontSize: 17,
+                                      fontSize: 14,
                                     )),
                               ],
                             ),
-
                           ]),
                     ),
                   ],
                 ),
-              ),
-              //Foto do perfil
-              Container(
-                  padding: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      border: Border.all(width: 6,
-                        color: primaryColor,)
-                  ),
-                  child: Stack(
-                    children: [
-                      Container(
-                        height: 300,
-                        width: 300,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            image: DecorationImage(
-                                image: AssetImage(
-                                    "assets/images/profile.jpg")
-                            )
-                        ),
-                      ),
-                      Container(
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border: Border.all(width: 2,
-                              color: primaryColor,)
-                        ),
-                        child: Container(
-                          height: 70,
-                          width: 70,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            shape: BoxShape.circle,
-                          ),
-                          child: Lottie.asset('images/hi_$mode.json'),
-                        ),
-                      ),
-                    ],
-                  )
               ),
             ],
           )

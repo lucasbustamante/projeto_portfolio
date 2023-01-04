@@ -21,7 +21,7 @@ class AppTheme extends StatelessWidget {
           home: RootScreen(),
     debugShowCheckedModeBanner: false,
     theme: ThemeData(
-    accentColor: kPrimaryColor,
+    accentColor: primaryColor,
     brightness: Controller.instance.onOff ?
     Brightness.dark : Brightness.light
     ));

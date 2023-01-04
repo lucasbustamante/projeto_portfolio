@@ -6,48 +6,49 @@ import '../../resource/appClass.dart';
 import '../../resource/colors.dart';
 import '../../resource/strings.dart';
 
-class IntroWeb extends StatefulWidget {
-  AutoScrollController aScrollController;
+class IntroMobile extends StatefulWidget {
+  final AutoScrollController aScrollController;
 
-  IntroWeb(this.aScrollController, {Key? key}) : super(key: key);
+  IntroMobile(this.aScrollController, {Key? key}) : super(key: key);
 
   @override
-  State<IntroWeb> createState() => _IntroWebState();
+  State<IntroMobile> createState() => _IntroMobileState();
 }
 
-class _IntroWebState extends State<IntroWeb> {
+class _IntroMobileState extends State<IntroMobile> {
+
   @override
   Widget build(BuildContext context) {
     return Container(
       color: Colors.transparent,
-      margin: EdgeInsets.only(
-          left: AppClass().getMqWidth(context) * 0.01,
-          top: AppClass().getMqHeight(context) * 0.1),
-      child: Row(
+      height: AppClass().getMqHeight(context) - 50,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.only(left: 8.0, top: 50),
+                padding: const EdgeInsets.only(left: 8.0),
                 child: Text(
                   Strings.welcomeTxt,
                   style: TextStyle(
-                    fontWeight: FontWeight.bold,
+                      fontWeight: FontWeight.bold,
                       color: primaryColor,
-                      fontSize: 18,
+                      fontSize: 16,
                       fontFamily: 'sfmono'),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 8.0),
+                padding: const EdgeInsets.only(top: 10.0),
                 child: Text(
                   Strings.name,
                   style: GoogleFonts.robotoSlab(
                     color: primaryColor,
                     fontWeight: FontWeight.bold,
                     letterSpacing: 3,
-                    fontSize: 55,
+                    fontSize: 30,
                   ),
                 ),
               ),
@@ -65,24 +66,22 @@ class _IntroWebState extends State<IntroWeb> {
                           color: textColor,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 3,
-                          fontSize: 45,)),
+                          fontSize: 23,)),
                   ],
                 ),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 20.0),
                 child: Container(
-                  width: AppClass().getMqWidth(context) * 0.45,
+                  width: AppClass().getMqWidth(context) * 0.6,
                   child: RichText(
                       text: TextSpan(
                           text: Strings.introAbout,
-
                           style: GoogleFonts.roboto(
-                            fontStyle: FontStyle.italic,
                             color: textLight,
                             letterSpacing: 1,
                             height: 1.5,
-                            fontSize: 18,
+                            fontSize: 15,
                           ),
                           children: <TextSpan>[
                         TextSpan(
@@ -92,14 +91,14 @@ class _IntroWebState extends State<IntroWeb> {
                             color: primaryColor,
                             letterSpacing: 1,
                             height: 1.5,
-                            fontSize: 18,
+                            fontSize: 15,
                           ),
                         )
                       ])),
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(top: 50, bottom: 70),
+                padding: const EdgeInsets.only(top: 60.0),
                 child: InkWell(
                   onTap: () {
                     widget.aScrollController.scrollToIndex(1,
@@ -107,7 +106,7 @@ class _IntroWebState extends State<IntroWeb> {
                   },
                   child: Container(
                     height: AppClass().getMqHeight(context) * 0.09,
-                    width: AppClass().getMqWidth(context) * 0.2,
+                    width: AppClass().getMqWidth(context) * 0.45,
                     decoration: BoxDecoration(
                         color: Colors.transparent,
                         borderRadius: BorderRadius.all(Radius.circular(3.0)),

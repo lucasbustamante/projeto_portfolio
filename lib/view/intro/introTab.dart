@@ -34,6 +34,7 @@ class _IntroTabState extends State<IntroTab> {
                 child: Text(
                   Strings.welcomeTxt,
                   style: TextStyle(
+                      fontWeight: FontWeight.bold,
                       color: primaryColor,
                       fontSize: 16,
                       fontFamily: 'sfmono'),
@@ -65,7 +66,7 @@ class _IntroTabState extends State<IntroTab> {
                           color: textColor,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 3,
-                          fontSize: 45,)),
+                          fontSize: 35,)),
                   ],
                 ),
               ),
@@ -112,7 +113,7 @@ class _IntroTabState extends State<IntroTab> {
                         border: Border.all(
                             color: primaryColor, width: 1.5)),
                     child: Center(
-                      child: Text('Vamos lá!',
+                      child: Text(Strings.buttonGo,
                           style: TextStyle(
                               color: primaryColor,
                               fontSize: 13,
