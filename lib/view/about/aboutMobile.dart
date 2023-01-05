@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import '../../resource/appClass.dart';
 import '../../resource/colors.dart';
 import '../../resource/strings.dart';
+import 'package:flutter/cupertino.dart';
 
 class AboutMobile extends StatefulWidget {
   const AboutMobile({Key? key}) : super(key: key);
@@ -118,9 +119,10 @@ class _AboutMobileState extends State<AboutMobile> {
                     Padding(
                       padding: const EdgeInsets.only(top: 20.0),
                       child: GridView.count(
+                        physics: BouncingScrollPhysics(),
                           crossAxisCount: 2,
                           shrinkWrap: true,
-                          childAspectRatio: 10,
+                          childAspectRatio: 5,
                           children: [
                             Row(
                               children: [
@@ -130,19 +132,19 @@ class _AboutMobileState extends State<AboutMobile> {
                                       color: textLight,
                                       letterSpacing: 1,
                                       height: 1.5,
-                                      fontSize: 14,
+                                      fontSize: 16,
                                     )),
                               ],
                             ),
                             Row(
                               children: [
                                 Icon(Icons.arrow_right),
-                                Text(' Flutter',
+                                Text(Strings.tech1,
                                     style: GoogleFonts.robotoFlex(
                                       color: textLight,
                                       letterSpacing: 1,
                                       height: 1.5,
-                                      fontSize: 14,
+                                      fontSize: 16,
                                     )),
                               ],
                             ),
@@ -154,7 +156,7 @@ class _AboutMobileState extends State<AboutMobile> {
                                       color: textLight,
                                       letterSpacing: 1,
                                       height: 1.5,
-                                      fontSize: 14,
+                                      fontSize: 16,
                                     )),
                               ],
                             ),
@@ -166,7 +168,7 @@ class _AboutMobileState extends State<AboutMobile> {
                                       color: textLight,
                                       letterSpacing: 1,
                                       height: 1.5,
-                                      fontSize: 14,
+                                      fontSize: 16,
                                     )),
                               ],
                             ),
@@ -178,7 +180,7 @@ class _AboutMobileState extends State<AboutMobile> {
                                       color: textLight,
                                       letterSpacing: 1,
                                       height: 1.5,
-                                      fontSize: 14,
+                                      fontSize: 16,
                                     )),
                               ],
                             ),
@@ -190,7 +192,7 @@ class _AboutMobileState extends State<AboutMobile> {
                                       color: textLight,
                                       letterSpacing: 1,
                                       height: 1.5,
-                                      fontSize: 14,
+                                      fontSize: 16,
                                     )),
                               ],
                             ),
@@ -202,7 +204,7 @@ class _AboutMobileState extends State<AboutMobile> {
                                       color: textLight,
                                       letterSpacing: 1,
                                       height: 1.5,
-                                      fontSize: 14,
+                                      fontSize: 16,
                                     )),
                               ],
                             ),
@@ -214,7 +216,7 @@ class _AboutMobileState extends State<AboutMobile> {
                                       color: textLight,
                                       letterSpacing: 1,
                                       height: 1.5,
-                                      fontSize: 14,
+                                      fontSize: 16,
                                     )),
                               ],
                             ),
@@ -226,7 +228,7 @@ class _AboutMobileState extends State<AboutMobile> {
                                       color: textLight,
                                       letterSpacing: 1,
                                       height: 1.5,
-                                      fontSize: 14,
+                                      fontSize: 16,
                                     )),
                               ],
                             ),
