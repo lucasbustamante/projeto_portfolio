@@ -54,7 +54,7 @@ class _AboutTabState extends State<AboutTab> {
               padding: EdgeInsets.all(10),
               decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  border: Border.all(width: 6,
+                  border: Border.all(width: 4,
                     color: primaryColor,)
               ),
               child: Stack(
@@ -77,8 +77,8 @@ class _AboutTabState extends State<AboutTab> {
                           color: primaryColor,)
                     ),
                     child: Container(
-                      height: 70,
-                      width: 70,
+                      height: 50,
+                      width: 50,
                       decoration: BoxDecoration(
                         color: Colors.white,
                         shape: BoxShape.circle,

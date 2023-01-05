@@ -6,6 +6,7 @@ import '../../controller/generalController.dart';
 import '../../model/projectModel.dart';
 import '../../resource/colors.dart';
 import '../../resource/strings.dart';
+import '../../teste.dart';
 
 class ProjectsWeb extends StatefulWidget {
   const ProjectsWeb({Key? key}) : super(key: key);
@@ -273,17 +274,13 @@ class _ProjectsWebState extends State<ProjectsWeb> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        //TODO refatorar
-                        RichText(
-                          text: TextSpan(
-                              text: projectsList[data].desig,
+                        Text( projectsList[data].desig.toString(),
                               style: GoogleFonts.roboto(
                                   color: textColor,
                                   fontWeight: FontWeight.bold,
                                   letterSpacing: 1,
                                   fontSize: 20),
                               ),
-                        ),
                         projectsList[data].points!
                       ],
                     ),
@@ -296,7 +293,7 @@ class _ProjectsWebState extends State<ProjectsWeb> {
             onTap: () {
               switch (dataPage){
                 case 1 :
-                  print('1');
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => Teste()));
                   break;
                 case 2 :
                   print('2');

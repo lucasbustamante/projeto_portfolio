@@ -29,16 +29,13 @@ class _IntroMobileState extends State<IntroMobile> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 8.0),
-                child: Text(
-                  Strings.welcomeTxt,
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: primaryColor,
-                      fontSize: 16,
-                      fontFamily: 'sfmono'),
-                ),
+              Text(
+                Strings.welcomeTxt,
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    color: primaryColor,
+                    fontSize: 16,
+                    fontFamily: 'sfmono'),
               ),
               Padding(
                 padding: const EdgeInsets.only(top: 10.0),
@@ -66,7 +63,7 @@ class _IntroMobileState extends State<IntroMobile> {
                           color: textColor,
                           fontWeight: FontWeight.bold,
                           letterSpacing: 3,
-                          fontSize: 23,)),
+                          fontSize: 20,)),
                   ],
                 ),
               ),

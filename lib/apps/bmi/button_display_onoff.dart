@@ -1,6 +1,5 @@
-import 'package:bmi/home_page.dart';
-
 import 'constants/colors.dart';
+import 'home_page.dart';
 
 var PesoColor = kFontColor;
 var AltColor = kFontColor;

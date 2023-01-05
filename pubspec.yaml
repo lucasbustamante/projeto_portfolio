@@ -20,6 +20,11 @@ dependencies:
   scroll_to_index: ^3.0.1 #scrollToIndex
   animated_text_kit: ^4.2.1 #textAnimation
   lottie: ^2.1.0 #lottieAnimation
+  #apps
+  flutter_neumorphic_null_safety: ^3.2.4
+  auto_size_text: ^3.0.0
+  page_transition: ^2.0.4
+  qr_flutter: ^4.0.0
 
 dev_dependencies:
   flutter_test:

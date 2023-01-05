@@ -36,8 +36,8 @@ class _ProjectsTabState extends State<ProjectsTab> {
                 height: 20,
                 width: 600,
               ),
-              Image.asset('assets/images/project1.png',
-                height: AppClass().getMqWidth(context) * 0.35,),
+              Image.asset('assets/images/projectMobi1.png',
+                height: AppClass().getMqWidth(context) * 0.50,),
             ],
           )),
       ProjectsModel(
@@ -56,8 +56,8 @@ class _ProjectsTabState extends State<ProjectsTab> {
                 height: 20,
                 width: 600,
               ),
-              Image.asset('assets/images/project2.png',
-                height: AppClass().getMqWidth(context) * 0.35,),
+              Image.asset('assets/images/projectMobi2.png',
+                height: AppClass().getMqWidth(context) * 0.50,),
             ],
           )),
       ProjectsModel(
@@ -75,8 +75,8 @@ class _ProjectsTabState extends State<ProjectsTab> {
                 height: 20,
                 width: 600,
               ),
-              Image.asset('assets/images/project3.png',
-                height: AppClass().getMqWidth(context) * 0.35,),
+              Image.asset('assets/images/projectMobi3.png',
+                height: AppClass().getMqWidth(context) * 0.50,),
             ],
           )),
       ProjectsModel(
@@ -95,8 +95,8 @@ class _ProjectsTabState extends State<ProjectsTab> {
                 width: 600,
 
               ),
-              Image.asset('assets/images/project4.png',
-                height: AppClass().getMqWidth(context) * 0.35,),
+              Image.asset('assets/images/projectMobi4.png',
+                height: AppClass().getMqWidth(context) * 0.50,),
 
             ],
           )),

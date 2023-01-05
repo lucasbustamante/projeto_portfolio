@@ -1,8 +1,7 @@
-import 'package:bmi/constants/colors.dart';
 import'package:flutter/material.dart';
 import 'package:flutter_neumorphic_null_safety/flutter_neumorphic.dart';
-
 import 'button_display_onoff.dart';
+import 'constants/colors.dart';
 
 class Display extends StatefulWidget {
 
@@ -27,12 +26,13 @@ class _DisplayState extends State<Display> {
               Column(mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    height: 50,
+                    height: size/12,
                     width: 100,
                     child: NeumorphicButton(
                       onPressed: (){
                         setState((){
-                          onoff('peso');
+                          onoff('peso',
+                          );
                         });
                       },
                       child: Center(
@@ -48,7 +48,7 @@ class _DisplayState extends State<Display> {
                   SizedBox(height: size*0.09),
                   Container(
                     width: 100,
-                    height: 50,
+                    height: size/12,
                     child: NeumorphicButton(
                       onPressed: (){
                         setState((){

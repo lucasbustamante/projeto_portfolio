@@ -1,9 +1,8 @@
-import 'package:bmi/constants/colors.dart';
-import 'package:bmi/display.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_neumorphic_null_safety/flutter_neumorphic.dart';
 
 import 'button_display_onoff.dart';
+import 'constants/colors.dart';
 
 class Result extends StatelessWidget {
   final String result;
