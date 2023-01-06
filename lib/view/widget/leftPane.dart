@@ -32,7 +32,7 @@ class _LeftPaneState extends ConsumerState<LeftPane> {
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           Container(
-                            height: AppClass().getMqHeight(context) * 0.07,
+                            padding: EdgeInsets.symmetric(vertical: 10),
                             child: InkWell(
                               onTap: () async {
                                 await launchUrl(
@@ -54,12 +54,12 @@ class _LeftPaneState extends ConsumerState<LeftPane> {
                                     color: val == "git"
                                         ? primaryColor
                                         : textColor,
-                                    width: 22),
+                                    width: 25),
                               ),
                             ),
                           ),
                           Container(
-                            height: AppClass().getMqHeight(context) * 0.07,
+                            padding: EdgeInsets.symmetric(vertical: 10),
                             child: InkWell(
                               onTap: () async {
                                 await launchUrl(
@@ -82,12 +82,12 @@ class _LeftPaneState extends ConsumerState<LeftPane> {
                                     color: val == "instagram"
                                         ? primaryColor
                                         : textColor,
-                                    width: 22),
+                                    width: 25),
                               ),
                             ),
                           ),
                           Container(
-                            height: AppClass().getMqHeight(context) * 0.07,
+                            padding: EdgeInsets.symmetric(vertical: 10),
                             child: InkWell(
                               onTap: () async {
                                 await launchUrl(Uri.parse(
@@ -110,12 +110,12 @@ class _LeftPaneState extends ConsumerState<LeftPane> {
                                     color: val == "linkedIn"
                                         ? primaryColor
                                         : textColor,
-                                    width: 22),
+                                    width: 25),
                               ),
                             ),
                           ),
                           Container(
-                            height: AppClass().getMqHeight(context) * 0.07,
+                            padding: EdgeInsets.symmetric(vertical: 10),
                             child: InkWell(
                               onTap: () async {
                                 await launchUrl(Uri.parse(
@@ -138,7 +138,7 @@ class _LeftPaneState extends ConsumerState<LeftPane> {
                                     color: val == "whatsapp"
                                         ? primaryColor
                                         : textColor,
-                                    width: 22),
+                                    width: 25),
                               ),
                             ),
                           ),

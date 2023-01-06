@@ -85,22 +85,22 @@ class _IntroTabState extends State<IntroTab> {
                             color: primaryColor,
                             letterSpacing: 1,
                             height: 1.5,
-                            fontSize: 16,
+                            fontSize: 18,
                           ),
                         )
                       ])),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 30.0, bottom: 50),
+                padding: const EdgeInsets.symmetric(vertical: 50),
                 child: InkWell(
                   onTap: () {
                     widget.aScrollController.scrollToIndex(1,
                         preferPosition: AutoScrollPosition.begin);
                   },
                   child: Container(
-                    height: AppClass().getMqHeight(context) * 0.09,
-                    width: AppClass().getMqWidth(context) * 0.25,
+                    height: 50,
+                    width: 100,
                     decoration: BoxDecoration(
                         color: Colors.transparent,
                         borderRadius: BorderRadius.all(Radius.circular(3.0)),

@@ -19,13 +19,14 @@ class _IntroWebState extends State<IntroWeb> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 600,
       color: Colors.transparent,
       margin: EdgeInsets.only(
           left: AppClass().getMqWidth(context) * 0.01,
           top: AppClass().getMqHeight(context) * 0.1),
       child: Row(
         children: [
-          Column(
+          Column(mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
@@ -100,8 +101,8 @@ class _IntroWebState extends State<IntroWeb> {
                         preferPosition: AutoScrollPosition.begin);
                   },
                   child: Container(
-                    height: AppClass().getMqHeight(context) * 0.09,
-                    width: AppClass().getMqWidth(context) * 0.2,
+                    height: 70,
+                    width: 170,
                     decoration: BoxDecoration(
                         color: Colors.transparent,
                         borderRadius: BorderRadius.all(Radius.circular(3.0)),

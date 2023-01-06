@@ -20,7 +20,7 @@ class _ContactWebState extends State<ContactWeb> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: AppClass().getMqHeight(context) - 70,
+      height: 700,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -66,8 +66,8 @@ class _ContactWebState extends State<ContactWeb> {
                       Uri.parse(Strings.mailtoEmail));
                 },
                 child: Container(
-                  height: AppClass().getMqHeight(context) * 0.09,
-                  width: AppClass().getMqWidth(context) * 0.15,
+                  height: 70,
+                  width: 170,
                   decoration: BoxDecoration(
                       color: Colors.transparent,
                       borderRadius: BorderRadius.all(Radius.circular(3.0)),

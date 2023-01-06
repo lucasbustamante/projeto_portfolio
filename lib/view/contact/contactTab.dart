@@ -16,7 +16,6 @@ class _ContactTabState extends State<ContactTab> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: AppClass().getMqHeight(context) - 70,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -63,8 +62,8 @@ class _ContactTabState extends State<ContactTab> {
                         Uri.parse(Strings.mailtoEmail));
                   },
                   child: Container(
-                    height: AppClass().getMqHeight(context) * 0.09,
-                    width: AppClass().getMqWidth(context) * 0.15,
+                    height: 50,
+                    width: 100,
                     decoration: BoxDecoration(
                         color: Colors.transparent,
                         borderRadius: BorderRadius.all(Radius.circular(3.0)),

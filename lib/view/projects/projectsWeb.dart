@@ -103,10 +103,10 @@ class _ProjectsWebState extends State<ProjectsWeb> {
           )),
     ];
     return Container(
-      height: AppClass().getMqHeight(context) - 70,
+      height: 800,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -307,8 +307,8 @@ class _ProjectsWebState extends State<ProjectsWeb> {
               }
             },
             child: Container(
-              height: AppClass().getMqHeight(context) * 0.05,
-              width: AppClass().getMqWidth(context) * 0.09,
+              height: 60,
+              width: 140,
               decoration: BoxDecoration(
                   color: Colors.transparent,
                   borderRadius: BorderRadius.all(Radius.circular(3.0)),

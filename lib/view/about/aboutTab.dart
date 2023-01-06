@@ -50,44 +50,47 @@ class _AboutTabState extends State<AboutTab> {
             ],
           ),
           //Foto do perfil
-          Container(
-              padding: EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  border: Border.all(width: 4,
-                    color: primaryColor,)
-              ),
-              child: Stack(
-                children: [
-                  Container(
-                    height: 250,
-                    width: 250,
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        image: DecorationImage(
-                            image: AssetImage(
-                                "assets/images/profile.jpg")
-                        )
-                    ),
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(width: 2,
-                          color: primaryColor,)
-                    ),
-                    child: Container(
-                      height: 50,
-                      width: 50,
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 25),
+            child: Container(
+                padding: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(width: 4,
+                      color: primaryColor,)
+                ),
+                child: Stack(
+                  children: [
+                    Container(
+                      height: 250,
+                      width: 250,
                       decoration: BoxDecoration(
-                        color: Colors.white,
-                        shape: BoxShape.circle,
+                          shape: BoxShape.circle,
+                          image: DecorationImage(
+                              image: AssetImage(
+                                  "assets/images/profile.jpg")
+                          )
                       ),
-                      child: Lottie.asset('images/hi_$mode.json'),
                     ),
-                  ),
-                ],
-              )
+                    Container(
+                      decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(width: 2,
+                            color: primaryColor,)
+                      ),
+                      child: Container(
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          shape: BoxShape.circle,
+                        ),
+                        child: Lottie.asset('images/hi_$mode.json'),
+                      ),
+                    ),
+                  ],
+                )
+            ),
           ),
           Row(
             children: [

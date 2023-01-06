@@ -37,7 +37,7 @@ class _ProjectsTabState extends State<ProjectsTab> {
                 width: 600,
               ),
               Image.asset('assets/images/projectMobi1.png',
-                height: AppClass().getMqWidth(context) * 0.50,),
+                height: 500),
             ],
           )),
       ProjectsModel(
@@ -57,7 +57,7 @@ class _ProjectsTabState extends State<ProjectsTab> {
                 width: 600,
               ),
               Image.asset('assets/images/projectMobi2.png',
-                height: AppClass().getMqWidth(context) * 0.50,),
+                  height: 500),
             ],
           )),
       ProjectsModel(
@@ -76,7 +76,7 @@ class _ProjectsTabState extends State<ProjectsTab> {
                 width: 600,
               ),
               Image.asset('assets/images/projectMobi3.png',
-                height: AppClass().getMqWidth(context) * 0.50,),
+                  height: 500),
             ],
           )),
       ProjectsModel(
@@ -96,17 +96,17 @@ class _ProjectsTabState extends State<ProjectsTab> {
 
               ),
               Image.asset('assets/images/projectMobi4.png',
-                height: AppClass().getMqWidth(context) * 0.50,),
+                  height: 500),
 
             ],
           )),
     ];
 
     return Container(
-      height: AppClass().getMqHeight(context) - 100,
+      height: 800,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -137,7 +137,7 @@ class _ProjectsTabState extends State<ProjectsTab> {
             var data = ref.watch(selectedExpProvider);
             return Container(
               width: AppClass().getMqWidth(context) * 0.8,
-              margin: EdgeInsets.only(top: 30.0, left: 30.0),
+              margin: EdgeInsets.only(top: 20.0, left: 10.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -275,16 +275,13 @@ class _ProjectsTabState extends State<ProjectsTab> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
-                        //TODO refatorar
-                        RichText(
-                          text: TextSpan(
-                            text: projectsList[data].desig,
+                       Text(projectsList[data].desig.toString(),
                             style: GoogleFonts.roboto(
                                 color: textColor,
                                 fontWeight: FontWeight.bold,
                                 letterSpacing: 1,
                                 fontSize: 20),
-                          ),
+
                         ),
                         projectsList[data].points!
                       ],
@@ -312,8 +309,8 @@ class _ProjectsTabState extends State<ProjectsTab> {
               }
             },
             child: Container(
-              height: AppClass().getMqHeight(context) * 0.05,
-              width: AppClass().getMqWidth(context) * 0.09,
+              height: 50,
+              width: 100,
               decoration: BoxDecoration(
                   color: Colors.transparent,
                   borderRadius: BorderRadius.all(Radius.circular(3.0)),
