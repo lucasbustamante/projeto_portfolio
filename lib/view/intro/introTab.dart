@@ -52,22 +52,16 @@ class _IntroTabState extends State<IntroTab> {
                   ),
                 ),
               ),
-              Container(
-                width: AppClass().getMqWidth(context) -
-                    (AppClass().getMqWidth(context) * 0.23),
-                child: AnimatedTextKit(
-                  repeatForever: true,
-                  pause: const Duration(seconds: 5),
-                  animatedTexts: [
-                    TyperAnimatedText(
-                        Strings.whatIdo,
-                        textAlign: TextAlign.start,
-                        textStyle: GoogleFonts.robotoSlab(
-                          color: textColor,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 3,
-                          fontSize: 35,)),
-                  ],
+              Padding(
+                padding: const EdgeInsets.only(top: 2.0),
+                child: Text(
+                  Strings.whatIdo,
+                  style: GoogleFonts.robotoSlab(
+                    color: textColor,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 3,
+                    fontSize: 35,
+                  ),
                 ),
               ),
               Padding(

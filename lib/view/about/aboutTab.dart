@@ -160,6 +160,7 @@ class _AboutTabState extends State<AboutTab> {
                     Padding(
                       padding: const EdgeInsets.only(top: 20.0),
                       child: GridView.count(
+                          physics: BouncingScrollPhysics(),
                           crossAxisCount: 2,
                           shrinkWrap: true,
                           childAspectRatio: 10,

@@ -20,8 +20,8 @@ class _IntroMobileState extends State<IntroMobile> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: 600,
       color: Colors.transparent,
-      height: AppClass().getMqHeight(context) - 50,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -49,28 +49,22 @@ class _IntroMobileState extends State<IntroMobile> {
                   ),
                 ),
               ),
-              Container(
-                width: AppClass().getMqWidth(context) -
-                    (AppClass().getMqWidth(context) * 0.23),
-                child: AnimatedTextKit(
-                  repeatForever: true,
-                  pause: const Duration(seconds: 5),
-                  animatedTexts: [
-                    TyperAnimatedText(
-                        Strings.whatIdo,
-                        textAlign: TextAlign.start,
-                        textStyle: GoogleFonts.robotoSlab(
-                          color: textColor,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 3,
-                          fontSize: 20,)),
-                  ],
+              Padding(
+                padding: const EdgeInsets.only(top: 4.0),
+                child: Text(
+                  Strings.whatIdo,
+                  style: GoogleFonts.robotoSlab(
+                    color: textColor,
+                    fontWeight: FontWeight.bold,
+                    letterSpacing: 3,
+                    fontSize: 19,
+                  ),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 20.0),
+                padding: const EdgeInsets.only(top: 40.0),
                 child: Container(
-                  width: AppClass().getMqWidth(context) * 0.6,
+                  width: AppClass().getMqWidth(context) * 0.8,
                   child: RichText(
                       text: TextSpan(
                           text: Strings.introAbout,
@@ -88,22 +82,22 @@ class _IntroMobileState extends State<IntroMobile> {
                             color: primaryColor,
                             letterSpacing: 1,
                             height: 1.5,
-                            fontSize: 15,
+                            fontSize: 17,
                           ),
                         )
                       ])),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 60.0),
+                padding: const EdgeInsets.symmetric(vertical: 50),
                 child: InkWell(
                   onTap: () {
                     widget.aScrollController.scrollToIndex(1,
                         preferPosition: AutoScrollPosition.begin);
                   },
                   child: Container(
-                    height: AppClass().getMqHeight(context) * 0.09,
-                    width: AppClass().getMqWidth(context) * 0.45,
+                    height: 50,
+                    width: 100,
                     decoration: BoxDecoration(
                         color: Colors.transparent,
                         borderRadius: BorderRadius.all(Radius.circular(3.0)),

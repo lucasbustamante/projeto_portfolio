@@ -59,7 +59,6 @@ class _ProjectsMobileState extends State<ProjectsMobile> {
                     fontSize: 11,
                     fontFamily: 'sfmono'),),
               Image.asset('assets/images/projectMobi3.png')
-
             ],
           )),
       ProjectsModel(
@@ -67,20 +66,18 @@ class _ProjectsMobileState extends State<ProjectsMobile> {
           points: Column(
             children: [
               Text(Strings.info4,
-  style: TextStyle(
-      height: 1.5,
-      fontSize: 11,
-      fontFamily: 'sfmono'),),
+                style: TextStyle(
+                    height: 1.5,
+                    fontSize: 11,
+                    fontFamily: 'sfmono'),),
               Image.asset('assets/images/projectMobi4.png')
             ],
           )),
     ];
-
     return Container(
-      height: AppClass().getMqHeight(context) - 100,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -111,7 +108,6 @@ class _ProjectsMobileState extends State<ProjectsMobile> {
             var data = ref.watch(selectedExpProvider);
             return Container(
               width: AppClass().getMqWidth(context),
-              margin: EdgeInsets.all(30.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -167,7 +163,7 @@ class _ProjectsMobileState extends State<ProjectsMobile> {
                                             : primaryColor,
                                         width: 2))),
                             child: Text(
-                            Strings.project2,
+                              Strings.project2,
                               style: TextStyle(
                                   color: data == 1
                                       ? textLight2
@@ -196,7 +192,7 @@ class _ProjectsMobileState extends State<ProjectsMobile> {
                                             : primaryColor,
                                         width: 2))),
                             child: Text(
-                            Strings.project3,
+                              Strings.project3,
                               style: TextStyle(
                                   color: data == 2
                                       ? textLight2
@@ -246,11 +242,11 @@ class _ProjectsMobileState extends State<ProjectsMobile> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Text(projectsList[data].desig.toString(),
-                              style: GoogleFonts.roboto(
-                                  color: textColor,
-                                  fontWeight: FontWeight.bold,
-                                  letterSpacing: 1,
-                                  fontSize: 18),
+                          style: GoogleFonts.roboto(
+                              color: textColor,
+                              fontWeight: FontWeight.bold,
+                              letterSpacing: 1,
+                              fontSize: 18),
                         ),
                         projectsList[data].points!
                       ],
@@ -278,8 +274,8 @@ class _ProjectsMobileState extends State<ProjectsMobile> {
               }
             },
             child: Container(
-              height: AppClass().getMqHeight(context) * 0.05,
-              width: AppClass().getMqWidth(context) * 0.3,
+              height: 50,
+              width: 100,
               decoration: BoxDecoration(
                   color: Colors.transparent,
                   borderRadius: BorderRadius.all(Radius.circular(3.0)),
@@ -295,7 +291,8 @@ class _ProjectsMobileState extends State<ProjectsMobile> {
                         fontFamily: 'sfmono')),
               ),
             ),
-          )
+          ),
+          SizedBox(height: 120)
         ],
       ),
     );
