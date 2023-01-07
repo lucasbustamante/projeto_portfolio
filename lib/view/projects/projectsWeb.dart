@@ -46,7 +46,6 @@ class _ProjectsWebState extends State<ProjectsWeb> {
           points: Column(
             children: [
               Container(
-
                 child: Text(Strings.info2,
                     style: TextStyle(
                         color: textLight,
@@ -289,6 +288,7 @@ class _ProjectsWebState extends State<ProjectsWeb> {
               ),
             );
           }),
+          //TODO criar caminhos dos projetos
           InkWell(
             onTap: () {
               switch (dataPage){
@@ -325,7 +325,6 @@ class _ProjectsWebState extends State<ProjectsWeb> {
               ),
             ),
           )
-
         ],
       ),
     );

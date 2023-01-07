@@ -51,19 +51,7 @@ class _RootScreenState extends ConsumerState<RootScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body:
-            //TODO refatorar
-        /*NotificationListener<UserScrollNotification>(
-          onNotification: (notification) {
-            final ScrollDirection direction = notification.direction;
-            if (direction == ScrollDirection.reverse) {
-              ref.read(scrollControlProvider.notifier).state = false;
-            } else if (direction == ScrollDirection.forward) {
-              ref.read(scrollControlProvider.notifier).state = true;
-            }
-            return true;
-          },
-          child: */Container(
+        body: Container(
             height: AppClass().getMqHeight(context),
             child: Column(
               children: [
@@ -117,7 +105,6 @@ class _RootScreenState extends ConsumerState<RootScreen> {
               ],
             ),
           ),
-        //),
         floatingActionButton: FloatingActionButton(
           onPressed: (){
            setState(() {
