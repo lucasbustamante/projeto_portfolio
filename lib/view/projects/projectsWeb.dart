@@ -6,7 +6,6 @@ import '../../controller/generalController.dart';
 import '../../model/projectModel.dart';
 import '../../resource/colors.dart';
 import '../../resource/strings.dart';
-import '../../teste.dart';
 
 class ProjectsWeb extends StatefulWidget {
   const ProjectsWeb({Key? key}) : super(key: key);
@@ -17,9 +16,7 @@ class ProjectsWeb extends StatefulWidget {
 
 class _ProjectsWebState extends State<ProjectsWeb> {
 
-  int dataPage = 1;
-
-  @override
+    @override
   Widget build(BuildContext context) {
     List<ProjectsModel> projectsList = [
       ProjectsModel(
@@ -146,7 +143,6 @@ class _ProjectsWebState extends State<ProjectsWeb> {
                       children: [
                         InkWell(
                           onTap: () {
-                            dataPage = 1;
                             ref.read(selectedExpProvider.notifier).state = 0;
                           },
                           child: Container(
@@ -176,7 +172,6 @@ class _ProjectsWebState extends State<ProjectsWeb> {
                         ),
                         InkWell(
                           onTap: () {
-                            dataPage = 2;
                             ref.read(selectedExpProvider.notifier).state = 1;
                           },
                           child: Container(
@@ -206,7 +201,6 @@ class _ProjectsWebState extends State<ProjectsWeb> {
                         ),
                         InkWell(
                           onTap: () {
-                            dataPage = 3;
                             ref.read(selectedExpProvider.notifier).state = 2;
                           },
                           child: Container(
@@ -236,7 +230,6 @@ class _ProjectsWebState extends State<ProjectsWeb> {
                         ),
                         InkWell(
                           onTap: () {
-                            dataPage = 4;
                             ref.read(selectedExpProvider.notifier).state = 3;
                           },
                           child: Container(
@@ -288,42 +281,16 @@ class _ProjectsWebState extends State<ProjectsWeb> {
               ),
             );
           }),
-          //TODO criar caminhos dos projetos
-          InkWell(
-            onTap: () {
-              switch (dataPage){
-                case 1 :
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => Teste()));
-                  break;
-                case 2 :
-                  print('2');
-                  break;
-                case 3 :
-                  print('3');
-                  break;
-                case 4 :
-                  print('4');
-                  break;
-              }
-            },
-            child: Container(
-              height: 60,
-              width: 140,
-              decoration: BoxDecoration(
-                  color: Colors.transparent,
-                  borderRadius: BorderRadius.all(Radius.circular(3.0)),
-                  border: Border.all(
-                      color: primaryColor, width: 1.5)),
-              child: Center(
-                child: Text(Strings.buttonProject,
-                    style: TextStyle(
-                        color: primaryColor,
-                        fontSize: 13,
-                        letterSpacing: 1,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: 'sfmono')),
-              ),
-            ),
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 70),
+            child: Text('Para testar os aplicativos acesse este site através '
+                  'do smartphone e clique no botão testar',
+                style: TextStyle(
+                    color: textLight,
+                    letterSpacing: 1,
+                    height: 1.5,
+                    fontSize: 14,
+                    fontFamily: 'sfmono')),
           )
         ],
       ),

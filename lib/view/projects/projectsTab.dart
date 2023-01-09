@@ -16,8 +16,6 @@ class ProjectsTab extends StatefulWidget {
 
 class _ProjectsTabState extends State<ProjectsTab> {
 
-  int dataPage = 1;
-
   @override
   Widget build(BuildContext context) {
     List<ProjectsModel> projectsList = [
@@ -148,7 +146,6 @@ class _ProjectsTabState extends State<ProjectsTab> {
                       children: [
                         InkWell(
                           onTap: () {
-                            dataPage = 1;
                             ref.read(selectedExpProvider.notifier).state = 0;
                           },
                           child: Container(
@@ -178,7 +175,6 @@ class _ProjectsTabState extends State<ProjectsTab> {
                         ),
                         InkWell(
                           onTap: () {
-                            dataPage = 2;
                             ref.read(selectedExpProvider.notifier).state = 1;
                           },
                           child: Container(
@@ -208,7 +204,6 @@ class _ProjectsTabState extends State<ProjectsTab> {
                         ),
                         InkWell(
                           onTap: () {
-                            dataPage = 3;
                             ref.read(selectedExpProvider.notifier).state = 2;
                           },
                           child: Container(
@@ -238,7 +233,6 @@ class _ProjectsTabState extends State<ProjectsTab> {
                         ),
                         InkWell(
                           onTap: () {
-                            dataPage = 4;
                             ref.read(selectedExpProvider.notifier).state = 3;
                           },
                           child: Container(
@@ -291,43 +285,14 @@ class _ProjectsTabState extends State<ProjectsTab> {
               ),
             );
           }),
-          //TODO criar caminhos dos projetos
-          InkWell(
-            onTap: () {
-              switch (dataPage){
-                case 1 :
-                  print('1');
-                  break;
-                case 2 :
-                  print('2');
-                  break;
-                case 3 :
-                  print('3');
-                  break;
-                case 4 :
-                  print('4');
-                  break;
-              }
-            },
-            child: Container(
-              height: 50,
-              width: 100,
-              decoration: BoxDecoration(
-                  color: Colors.transparent,
-                  borderRadius: BorderRadius.all(Radius.circular(3.0)),
-                  border: Border.all(
-                      color: primaryColor, width: 1.5)),
-              child: Center(
-                child: Text(Strings.buttonProject,
-                    style: TextStyle(
-                        color: primaryColor,
-                        fontSize: 13,
-                        letterSpacing: 1,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: 'sfmono')),
-              ),
-            ),
-          )
+          Text('Para testar os aplicativos acesse este site através '
+              'do smartphone e clique no botão testar',
+              style: TextStyle(
+              color: textLight,
+              letterSpacing: 1,
+              height: 1.5,
+              fontSize: 14,
+              fontFamily: 'sfmono'))
         ],
       ),
     );
