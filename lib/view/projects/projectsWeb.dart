@@ -282,9 +282,10 @@ class _ProjectsWebState extends State<ProjectsWeb> {
             );
           }),
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 70),
+            padding: const EdgeInsets.symmetric(horizontal: 250),
             child: Text('Para testar os aplicativos acesse este site através '
                   'do smartphone e clique no botão testar',
+                textAlign: TextAlign.center,
                 style: TextStyle(
                     color: textLight,
                     letterSpacing: 1,

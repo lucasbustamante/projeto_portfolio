@@ -27,51 +27,65 @@ class _ProjectsMobileState extends State<ProjectsMobile> {
     List<ProjectsModel> projectsList = [
       ProjectsModel(
           desig: Strings.project1,
-          points: Column(
-            children: [
-              Text(Strings.info1,
-                style: TextStyle(
-                    height: 1.5,
-                    fontSize: 11,
-                    fontFamily: 'sfmono'),),
-              Image.asset('assets/images/projectMobi1.png')
-            ],
+          points: Padding(
+            padding: const EdgeInsets.only(right: 50),
+            child: Column(
+              children: [
+                Text(Strings.info1,
+                  style: TextStyle(
+                      height: 1.5,
+                      fontSize: 11,
+                      fontFamily: 'sfmono'),),
+                Image.asset('assets/images/projectMobi1.png')
+              ],
+            ),
           )),
       ProjectsModel(
           desig: Strings.project2,
-          points: Column(
-            children: [
-              Text(Strings.info2,
-                style: TextStyle(
-                    height: 1.5,
-                    fontSize: 11,
-                    fontFamily: 'sfmono'),),
-              Image.asset('assets/images/projectMobi2.png')
-            ],
+          points: Padding(
+            padding: const EdgeInsets.only(right: 50),
+            child: Column(
+              children: [
+                Text(Strings.info2,
+                  style: TextStyle(
+                      height: 1.5,
+                      fontSize: 11,
+                      fontFamily: 'sfmono'),),
+                Image.asset('assets/images/projectMobi2.png')
+              ],
+            ),
           )),
       ProjectsModel(
           desig: Strings.project3,
-          points: Column(
-            children: [
-              Text(Strings.info3,
-                style: TextStyle(
-                    height: 1.5,
-                    fontSize: 11,
-                    fontFamily: 'sfmono'),),
-              Image.asset('assets/images/projectMobi3.png')
-            ],
+          points: Padding(
+            padding: const EdgeInsets.only(right: 50),
+            child: Column(
+              children: [
+                Container(width: 350,
+                  child: Text(Strings.info3,
+                    style: TextStyle(
+                        height: 1.5,
+                        fontSize: 11,
+                        fontFamily: 'sfmono'),),
+                ),
+                Image.asset('assets/images/projectMobi3.png')
+              ],
+            ),
           )),
       ProjectsModel(
           desig: Strings.project4,
-          points: Column(
-            children: [
-              Text(Strings.info4,
-                style: TextStyle(
-                    height: 1.5,
-                    fontSize: 11,
-                    fontFamily: 'sfmono'),),
-              Image.asset('assets/images/projectMobi4.png')
-            ],
+          points: Padding(
+            padding: const EdgeInsets.only(right: 50),
+            child: Column(
+              children: [
+                Text(Strings.info4,
+                  style: TextStyle(
+                      height: 1.5,
+                      fontSize: 11,
+                      fontFamily: 'sfmono'),),
+                Image.asset('assets/images/projectMobi4.png')
+              ],
+            ),
           )),
     ];
     return Container(

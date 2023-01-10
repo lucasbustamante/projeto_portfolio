@@ -21,8 +21,7 @@ class _ContactWebState extends State<ContactWeb> {
   Widget build(BuildContext context) {
     return Container(
       height: 700,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      child: Column(mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Column(
             children: [
@@ -60,30 +59,36 @@ class _ContactWebState extends State<ContactWeb> {
                   ),
                 ),
               ),
-              InkWell(
-                onTap: () async {
-                  await launchUrl(
-                      Uri.parse(Strings.mailtoEmail));
-                },
-                child: Container(
-                  height: 70,
-                  width: 170,
-                  decoration: BoxDecoration(
-                      color: Colors.transparent,
-                      borderRadius: BorderRadius.all(Radius.circular(3.0)),
-                      border: Border.all(
-                          color: primaryColor, width: 1.5)),
-                  child: Center(
-                    child: Text(Strings.buttonEmail,
-                        style: TextStyle(
-                            color: primaryColor,
-                            fontSize: 13,
-                            letterSpacing: 1,
-                            fontWeight: FontWeight.bold,
-                            fontFamily: 'sfmono')),
+              Padding(
+                padding: const EdgeInsets.only(
+                  top: 50, bottom: 150
+                ),
+                child: InkWell(
+                  onTap: () async {
+                    await launchUrl(
+                        Uri.parse(Strings.mailtoEmail));
+                  },
+                  child: Container(
+                    height: 70,
+                    width: 170,
+                    decoration: BoxDecoration(
+                        color: Colors.transparent,
+                        borderRadius: BorderRadius.all(Radius.circular(3.0)),
+                        border: Border.all(
+                            color: primaryColor, width: 1.5)),
+                    child: Center(
+                      child: Text(Strings.buttonEmail,
+                          style: TextStyle(
+                              color: primaryColor,
+                              fontSize: 13,
+                              letterSpacing: 1,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'sfmono')),
+                    ),
                   ),
                 ),
               ),
+
             ],
           ),
           Column(

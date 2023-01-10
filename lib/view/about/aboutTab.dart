@@ -85,7 +85,7 @@ class _AboutTabState extends State<AboutTab> {
                           color: Colors.white,
                           shape: BoxShape.circle,
                         ),
-                        child: Lottie.asset('images/hi_$mode.json'),
+                        child: Image.asset("assets/images/flutter.png"),
                       ),
                     ),
                   ],
@@ -97,7 +97,6 @@ class _AboutTabState extends State<AboutTab> {
               Expanded(
                 flex: 3,
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Padding(
                       padding: const EdgeInsets.only(top: 40.0),

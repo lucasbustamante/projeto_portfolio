@@ -285,14 +285,18 @@ class _ProjectsTabState extends State<ProjectsTab> {
               ),
             );
           }),
-          Text('Para testar os aplicativos acesse este site através '
-              'do smartphone e clique no botão testar',
-              style: TextStyle(
-              color: textLight,
-              letterSpacing: 1,
-              height: 1.5,
-              fontSize: 14,
-              fontFamily: 'sfmono'))
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 150),
+            child: Text('Para testar os aplicativos acesse este site através '
+                'do smartphone e clique no botão testar',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    color: textLight,
+                    letterSpacing: 1,
+                    height: 1.5,
+                    fontSize: 14,
+                    fontFamily: 'sfmono')),
+          )
         ],
       ),
     );

@@ -55,8 +55,7 @@ conhecimentos e oportunidades.''';
 
 
   static final project3 = '''IMC Neumorphic''';
-  static final info3 = '''Projeto inspirado em design encontrado no Dribbble''';
-
+  static final info3 = '''Calculadora de IMC com visual moderno, design inspirado em visual do Dribbble''';
 
 
   static final project4 = '''Smart Badge''';

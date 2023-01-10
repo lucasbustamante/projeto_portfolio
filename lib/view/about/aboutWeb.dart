@@ -275,7 +275,7 @@ class _AboutWebState extends ConsumerState<AboutWeb> {
                             color: Colors.white,
                             shape: BoxShape.circle,
                           ),
-                          child: Lottie.asset('images/hi_$mode.json'),
+                          child: Image.asset("assets/images/flutter.png"),
                         ),
                       ),
                     ],

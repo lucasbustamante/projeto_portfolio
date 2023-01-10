@@ -153,7 +153,6 @@ class _ContactMobileState extends State<ContactMobile> {
                           ),
                         ),
                         Container(
-                          height: AppClass().getMqHeight(context) * 0.07,
                           child: InkWell(
                             onTap: () async {
                               await launchUrl(Uri.parse(
